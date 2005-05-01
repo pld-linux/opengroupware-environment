@@ -9,7 +9,7 @@ Release:	8
 License:	LGPL
 Group:		Libraries
 URL:		http://www.opengroupware.org/
-BuildRequires:	rpmbuild(macros) >= 1.159
+BuildRequires:	rpmbuild(macros) >= 1.202
 Requires(pre):	/usr/sbin/groupadd
 Requires(pre):	/usr/sbin/useradd
 Requires(post):	/bin/hostname
@@ -38,6 +38,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %pre
 if [ "$1" = "1" ]; then
+# TODO: register in uid_gid.db.txt and use %%useradd/%%groupadd macros
 	/usr/sbin/groupadd shyrix
 	/usr/sbin/useradd -c "OpenGroupware.org User" \
 		-s /bin/sh -d %{_var}/lib/opengroupware.org -g skyrix ogo
@@ -48,6 +49,7 @@ if [ "$1" = "1" ]; then
 	cd %{_sysconfdir}
 	ln -s %{_var}/lib/opengroupware.org/.libFoundation opengroupware.org
 	## some defaults
+# add 'su -s /bin/sh' ?
 	su - ogo -c "
 	Defaults write NSGlobalDomain LSConnectionDictionary '{hostName=localhost; userName=OGo; password=\"\"; port=5432; databaseName=OGo}'
 	Defaults write NSGlobalDomain skyrix_id `hostname`
