@@ -21,7 +21,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Adds the required user and some configurations.
 
-%description
+%description -l pl
 Ustawienie wymaganych przez OpenGroupware.org zmiennych, u¿ytkowników
 i podstawowej konfiguracji.
 
