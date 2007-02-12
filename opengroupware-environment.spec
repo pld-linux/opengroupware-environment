@@ -2,7 +2,7 @@
 # - spec filename vs Name
 # - proper user/group creation
 Summary:	OGo environment
-Summary(pl):	¶rodowisko Ogo
+Summary(pl.UTF-8):   ≈örodowisko Ogo
 Name:		ogo-environment
 Version:	1.0a
 Release:	8
@@ -21,8 +21,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Adds the required user and some configurations.
 
-%description -l pl
-Ustawienie wymaganych przez OpenGroupware.org zmiennych, uøytkownikÛw
+%description -l pl.UTF-8
+Ustawienie wymaganych przez OpenGroupware.org zmiennych, u≈ºytkownik√≥w
 i podstawowej konfiguracji.
 
 %prep
