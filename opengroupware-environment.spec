@@ -2,7 +2,7 @@
 # - spec filename vs Name
 # - proper user/group creation
 Summary:	OGo environment
-Summary(pl.UTF-8):   Środowisko Ogo
+Summary(pl.UTF-8):	Środowisko Ogo
 Name:		ogo-environment
 Version:	1.0a
 Release:	8
